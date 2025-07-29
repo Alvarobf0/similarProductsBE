@@ -31,3 +31,14 @@ The following topics will be considered:
 - Code clarity and maintainability
 - Performance
 - Resilience
+
+## Proposed solution
+
+Inside `/similarproducts` it is found the Spring Boot application that exposes the agreed REST 
+API on port 5000. After executing the Maven build, the application `SimilarproductsApplication.java` can be launched to expose the endpoint and run the testing script.
+
+To ensure a better performance under high volume of requests, the application implements caching 
+and deals with requests asynchronously. Errors on the requests are handled with dedicated 
+exceptions to improve app resilience. Also, main functional classes have their own testing, 
+ensuring 
++90% coverage of the code.
